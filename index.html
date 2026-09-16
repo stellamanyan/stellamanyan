@@ -1,10 +1,72 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Stella Manyan Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to My Cozy Corner</title>
+    <style>
+        body {
+            background-color: #fff5f5; /* Soft pastel pink/white */
+            color: #5c4a4a; /* Deep warm brown for soft text contrast */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 24px rgba(255, 182, 193, 0.4); /* Pastel pink shadow */
+            text-align: center;
+            max-width: 400px;
+        }
+        h1 {
+            color: #ff8b94; /* Soft strawberry pink */
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        nav {
+            margin-top: 20px;
+        }
+        /* Cute Button Style Navigation Links */
+        .nav-link {
+            display: inline-block;
+            background-color: #ffaaa5; /* Soft peach */
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            margin: 5px;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+        .nav-link:hover {
+            background-color: #ff8b94;
+            transform: scale(1.05); /* Cute slight pop effect */
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
-    <p>Welcome to my website hosted on GitHub Pages.</p>
+
+    <div class="card">
+        <h1>🌸 Welcome! 🌸</h1>
+        <p>This is my happy little website hosted right here on GitHub. Take a look around!</p>
+        
+        <!-- Navigation Menu to other pages -->
+        <nav>
+            <a class="nav-link" href="index.html">Home</a>
+            <a class="nav-link" href="about.html">About Me</a>
+            <a class="nav-link" href="favorites.html">My Favorites</a>
+        </nav>
+    </div>
+
 </body>
 </html>
