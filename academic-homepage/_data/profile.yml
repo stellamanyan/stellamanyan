@@ -1,0 +1,78 @@
+primary_name: "Stella Lucine Manyan"
+secondary_name: ""
+navbar_name: "Stella Manyan"
+
+positions:
+- name: B.A. Candidate, Astrophysics & German Literature and Culture
+- name: Columbia University
+  logo: /assets/images/badges/Columbia_circle.svg
+
+email: "sld2197@columbia.edu"
+cv_link: /assets/cv/Stella_Manyan_CV.pdf
+# gscholar: xFmQpf4AAAAJ  # add your Google Scholar ID here if/when you have one
+github: stellamanyan
+# twitter: your_twitter_id
+# linkedin: your-linked-in-id
+# orcid: 0000-0000-0000-0000
+
+short_bio_text_justify: false
+short_bio: >-
+  <p>
+    I'm an undergraduate at Columbia University double majoring in Astrophysics and German Literature & Culture,
+    with a minor in Mathematics. My research interests are centered on instrumentation, optical design, and
+    observational astronomy &mdash; I'm especially drawn to building and operating the hardware that makes
+    discovery possible.
+  </p>
+  <p>
+    I've spent the past few summers designing optomechanical camera systems for robotic telescopes, upgrading
+    a campus observatory, and doing remote and in-person observing at facilities from Kitt Peak to Maunakea.
+    My long-term goal is a career in astro-instrumentation, building and operating the next generation of
+    telescopes.
+  </p>
+
+portrait_url: /assets/images/photos/portrait.jpg
+# portrait_caption: >-
+#   Add a caption for your photo here, or comment this out to disable it.
+
+education:
+- name: Columbia University
+  logo: /assets/images/badges/Columbia_circle.svg
+  position: >-
+    B.A. in Astrophysics and German Literature & Culture, Minor in Mathematics <br/>
+    GPA: 3.86
+  date: Sep. 2023 - May 2027 (expected)
+- name: Freie Universität Berlin
+  logo: /assets/images/badges/Columbia_circle.svg
+  position: International Summer School — B2 German Course
+  date: Summer 2024
+
+experience:
+- name: MIT Kavli Institute for Astrophysics and Space Research
+  logo: /assets/images/badges/MIT_Social_circle.png
+  dept: Optics/Infrared Lab
+  position: Opto-Mechanical Research Intern
+  date: May 2026 - Aug. 2026
+- name: Pupin Rutherford Observatory, Columbia University
+  logo: /assets/images/badges/Columbia_circle.svg
+  position: Student Lead, Telescope & Spectrograph Upgrades
+  date: Jan. 2026 - present
+- name: McIver Lab, Columbia / Max Planck Institute
+  logo: /assets/images/badges/Columbia_circle.svg
+  dept: Structure and Dynamics of Matter
+  position: Student Researcher, 2D Materials Nanofabrication
+  date: May 2025 - May 2026
+- name: Columbia Space Initiative
+  logo: /assets/images/badges/Columbia_circle.svg
+  dept: High Altitude Balloons / RASC-AL
+  position: Payload & Systems Team Member
+  date: 2023 - present
+
+awards:
+- name: CCE Summer Research Funding Recipient (x2) — $13,000 total raised
+  date: 2025 - 2026
+- name: Stan Musial Scholarship Recipient
+  date: 2025
+- name: Germanic Department Global Scholarship
+  date: 2024
+- name: Dean's List
+  date: All semesters
