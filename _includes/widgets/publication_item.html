@@ -1,0 +1,29 @@
+{% assign item = include.item %}
+<article class="aero-publication{% unless include.hide_bottom_border %} aero-item-divider{% endunless %}">
+    <div class="aero-publication-cover">
+        {% if item.cover %}
+        <img src="{{ item.cover | relative_url }}" alt="{{ item.title | escape }}" loading="lazy" width="300" height="200">
+        {% else %}
+        <svg class="bubble-visual-hash" data-bubble-visual-hash="{{ item.id | escape }}" viewBox="0 0 300 200" role="img" aria-label="Generated cover for {{ item.title | escape }}"></svg>
+        {% endif %}
+    </div>
+    <div class="aero-publication-body">
+        <h3>{{ item.title }}</h3>
+        <p class="aero-authors">{% include widgets/author_list.html authors=item.authors %}</p>
+        <p class="aero-venue">{{ item.pub_pre }}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}{% if item.semantic_scholar_id %} <span data-semantic-scholar-id="{{ item.semantic_scholar_id }}"></span>{% endif %}</p>
+        <div class="aero-abstract">{{ item.abstract }}</div>
+        <div class="aero-publication-links">
+            {% for link in item.links %}
+            {% assign link_name = link[0] | downcase %}
+            {% assign link_icon = 'website' %}
+            {% if link_name == 'code' or link_name == 'github' %}{% assign link_icon = 'code' %}{% endif %}
+            {% if link_name == 'paper' or link_name == 'pdf' %}{% assign link_icon = 'pdf' %}{% endif %}
+            {% if link[1].url %}
+            <a class="aero-button" target="{{ link[1].target | default: '_blank' }}" rel="noopener noreferrer" href="{{ link[1].url }}">{% include aero/icon.html name=link_icon %}{{ link[0] }}</a>
+            {% else %}
+            <a class="aero-button" target="_blank" rel="noopener noreferrer" href="{{ link[1] }}">{% include aero/icon.html name=link_icon %}{{ link[0] }}</a>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</article>

@@ -1,0 +1,16 @@
+{% assign news_by_year = site.news | sort: "date" | reverse | slice: 0, include.limit | group_by_exp: "item", "item.date | date: '%Y'" %}
+<section class="aero-panel my-3" aria-labelledby="news-title">
+    <header class="aero-panel-title">{% include aero/icon.html name='news' %}<h2 id="news-title">News</h2></header>
+    <div class="aero-panel-body aero-news">
+        {% for year in news_by_year %}
+        <div class="aero-news-group">
+            <h3 class="aero-year-label">{{ year.name }}</h3>
+            <div class="aero-news-items">
+                {% for item in year.items %}
+                <div class="aero-news-item"><div>{{ item.title }}</div><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%b %d" }}</time></div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>

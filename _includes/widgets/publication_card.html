@@ -1,0 +1,10 @@
+{% assign publications = include.publications %}
+<section class="aero-panel my-3" aria-labelledby="selected-publications-title">
+    <header class="aero-panel-title">
+        {% include aero/icon.html name='selected' %}<h2 id="selected-publications-title">{{ include.title | default: 'Selected Recent Publications' }}</h2>
+        <a class="aero-title-link" href="{{ '/publications' | relative_url }}">View all <span aria-hidden="true">›</span></a>
+    </header>
+    {% for item in publications limit:include.limit %}
+        {% include widgets/publication_item.html item=item hide_bottom_border=forloop.last %}
+    {% endfor %}
+</section>

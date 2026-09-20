@@ -1,0 +1,31 @@
+---
+layout: default
+title : Blog
+navbar_title: Blog
+---
+
+{% assign blogs_by_year = site.posts | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+
+<div class="aero-archive-layout">
+    <div class="aero-archive-main">
+        {% for year in blogs_by_year %}
+        {% assign num_blogs = year.items | size %}
+        <h2 class="aero-archive-year" id="year-{{ year.name }}">{{ year.name }}</h2>
+        <div class="aero-panel">
+            {% for item in year.items %}
+                {% include widgets/blog_card.html item=item hide_bottom_border=forloop.last first=forloop.first last=forloop.last %}
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="aero-archive-sidebar">
+        <nav id="navbar-year" class="aero-year-nav aero-panel" aria-label="Browse by year">
+            <div class="aero-panel-title">By year</div>
+            {% for year in blogs_by_year %}
+            <a class="nav-link aero-year-link" href="#year-{{ year.name }}">{{ year.name }}</a>
+            {% endfor %}
+        </nav>
+    </div>
+
+</div>

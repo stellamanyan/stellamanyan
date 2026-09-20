@@ -1,0 +1,39 @@
+<section class="aero-panel my-3" aria-labelledby="experience-title">
+    <header class="aero-panel-title">{% include aero/icon.html name='education' %}<h2 id="experience-title">Education &amp; Experience</h2></header>
+    <div class="aero-panel-body aero-experience-grid">
+        {% if site.data.profile.education %}
+        <div>
+            <h3 class="aero-subheading">Education</h3>
+            <ul class="aero-experience-list">
+                {% for item in site.data.profile.education %}
+                <li>
+                    {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="" class="aero-institution-logo" loading="lazy">{% endif %}
+                    <div class="aero-experience-detail"><strong>{{ item.name }}</strong>{% if item.dept %}<div>{{ item.dept }}</div>{% endif %}<div>{{ item.position }}</div><span class="aero-date">{{ item.date }}</span></div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% if site.data.profile.experience %}
+        <div>
+            <h3 class="aero-subheading">Experience</h3>
+            <ul class="aero-experience-list">
+                {% for item in site.data.profile.experience %}
+                <li>
+                    {% if item.logo %}<img src="{{ item.logo | relative_url }}" alt="" class="aero-institution-logo" loading="lazy">{% endif %}
+                    <div class="aero-experience-detail"><strong>{{ item.name }}</strong>{% if item.dept %}<div>{{ item.dept }}</div>{% endif %}<div>{{ item.position }}</div><span class="aero-date">{{ item.date }}</span></div>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% if site.data.profile.awards %}
+        <div>
+            <h3 class="aero-subheading">Honors &amp; Awards</h3>
+            <ul class="aero-awards-list">
+                {% for item in site.data.profile.awards %}<li><span>{{ item.name }}</span><span class="aero-date">{{ item.date }}</span></li>{% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+    </div>
+</section>

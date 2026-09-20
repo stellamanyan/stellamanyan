@@ -1,0 +1,36 @@
+<header class="aero-header">
+    <div class="aero-title-strip">
+        <a class="aero-brand" href="{{ '/' | relative_url }}">
+            {% include aero/icon.html name='website' %}
+            <span>{{ site.data.profile.navbar_name | escape }}</span>
+        </a>
+        {% if site.data.profile.positions.first.name %}
+        <span class="aero-affiliation">{{ site.data.profile.positions.first.name | strip_html | escape }}</span>
+        {% endif %}
+        <button class="aero-menu-button aero-button" type="button" data-aero-menu aria-controls="navbarResponsive" aria-expanded="false">
+            {% include aero/icon.html name='expand' %} Menu
+        </button>
+    </div>
+    <nav class="aero-navigation" aria-label="Main navigation">
+        <ul class="aero-nav-links" id="navbarResponsive">
+            {% for item in site.data.navigation.pages %}
+            {% assign nav_icon = item.icon | default: 'home' %}
+            {% unless item.icon %}
+                {% case item.name %}
+                    {% when 'Publications' %}{% assign nav_icon = 'publications' %}
+                    {% when 'Blog' %}{% assign nav_icon = 'blog' %}
+                    {% when 'Showcase' %}{% assign nav_icon = 'showcase' %}
+                {% endcase %}
+            {% endunless %}
+            {% assign is_active = false %}
+            {% if item.name == page.navbar_title or item.name == include.active_page %}{% assign is_active = true %}{% endif %}
+            {% if page.layout == 'blog_post' and item.name == 'Blog' %}{% assign is_active = true %}{% endif %}
+            <li>
+                <a class="aero-nav-link{% if is_active %} active{% endif %}" href="{{ item.url | relative_url }}"{% if is_active %} aria-current="page"{% endif %}>
+                    {% include aero/icon.html name=nav_icon %}<span>{{ item.name | escape }}</span>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+</header>

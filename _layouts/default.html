@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Template: https://github.com/luost26/academic-homepage -->
+<head>
+    {% include aero/head.html %}
+</head>
+<body class="aero-body" {{ page.body_attr }}>
+    <a class="aero-skip-link" href="#main-content">Skip to content</a>
+    <div class="aero-desktop">
+        <div class="aero-window">
+            {% include navbar.html %}
+            <main id="main-content" class="aero-main" tabindex="-1">
+                {% unless page.layout == 'blog_post' %}{% include aero/page_header.html %}{% endunless %}
+                {{ content }}
+            </main>
+            {% include footer.html %}
+        </div>
+    </div>
+    {% include aero/scripts.html %}
+</body>
+</html>
