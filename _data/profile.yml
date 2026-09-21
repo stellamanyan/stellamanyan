@@ -10,7 +10,7 @@ positions:
 
 email: "sld2197@columbia.edu"
 # cv_link: link-to-your-cv-file
-gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
+# gscholar: xFmQpf4AAAAJ  # This is an example, replace it with your own Google Scholar ID
 github: stellamanyan
 linkedin: www.linkedin.com/in/stella-manyan
 # orcid: 0000-0000-0000-0000
@@ -18,12 +18,10 @@ linkedin: www.linkedin.com/in/stella-manyan
 short_bio_text_justify: false
 short_bio: >-
   <p>
-    A <a href="https://en.wikipedia.org/wiki/Bicolor_cat" target="_blank">bicolor cat</a> is a cat with white fur combined with fur of some other colour, for example solid black, tabby, or colourpointed.
-  </p>
-  <p>
-    Hello! My name is Stella and I am a senior at Columbia University majoring in Astrophysics and German with a minor in Mathematics. My research interests are heavily geared towards instrumentation, optical design, and observational astronomy. While I
-have also pursued opportunities in more experimental physics, my dream is to one day have a career in astro-
-instrumentation, operate telescopes, and maybe even build an observatory on the moon one day :)
+    Hello! My name is Stella and I am a senior at Columbia University majoring in Astrophysics and German with a minor in Mathematics.
+    My research interests are heavily geared towards instrumentation, optical design, and observational astronomy. While I
+    have also pursued opportunities in more experimental physics, my dream is to one day have a career in astro-
+    instrumentation, operate telescopes, and maybe even build an observatory on the moon one day :)
   </p>
 
 portrait_url: /assets/images/photos/portrait.jpg
